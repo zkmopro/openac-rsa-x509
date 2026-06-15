@@ -1,0 +1,21 @@
+{
+  "name": "openac-rsa-x509",
+  "version": "0.1.0",
+  "description": "OpenAC RSA X.509 certificate utilities",
+  "type": "module",
+  "main": "src/index.mjs",
+  "exports": "./src/index.mjs",
+  "scripts": {
+    "fetch:assets": "node scripts/fetch-assets.mjs",
+    "fetch:keys": "node scripts/fetch-proving-keys.mjs",
+    "test": "node --test"
+  },
+  "keywords": [
+    "openac",
+    "rsa",
+    "x509",
+    "certificate"
+  ],
+  "author": "",
+  "license": "MIT"
+}

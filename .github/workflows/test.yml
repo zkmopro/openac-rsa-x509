@@ -1,0 +1,45 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch wasm assets
+        run: node scripts/fetch-assets.mjs
+
+      - name: Cache proving keys
+        uses: actions/cache@v4
+        with:
+          path: |
+            assets/*.key
+            assets/.proving-keys-manifest.json
+          key: proving-keys-${{ runner.os }}-${{ hashFiles('assets/.proving-keys-manifest.json') }}
+          restore-keys: proving-keys-${{ runner.os }}-
+
+      - name: Fetch proving keys
+        run: node scripts/fetch-proving-keys.mjs
+
+      - name: Save proving-key cache (updated manifest)
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            assets/*.key
+            assets/.proving-keys-manifest.json
+          key: proving-keys-${{ runner.os }}-${{ hashFiles('assets/.proving-keys-manifest.json') }}
+
+      - name: Run tests
+        run: node --test
+        timeout-minutes: 20

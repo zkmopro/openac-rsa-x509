@@ -1,0 +1,38 @@
+{
+  "spartan2_wasm.js.gz": {
+    "etag": "\"0x8DECA1FE63C406D\"",
+    "len": "7540"
+  },
+  "spartan2_wasm_bg.wasm.gz": {
+    "etag": "\"0x8DECA1FE648DC6A\"",
+    "len": "382514"
+  },
+  "spartan2_wasm.d.ts.gz": {
+    "etag": "\"0x8DECA1FE640CF2A\"",
+    "len": "2404"
+  },
+  "spartan2_wasm_bg.wasm.d.ts.gz": {
+    "etag": "\"0x8DECA1FE6464744\"",
+    "len": "487"
+  },
+  "certChainRS2048.wasm.gz": {
+    "etag": "\"0x8DECA228F3F52E8\"",
+    "len": "2614220"
+  },
+  "certChainRS4096.wasm.gz": {
+    "etag": "\"0x8DECA228F66A2A2\"",
+    "len": "2878597"
+  },
+  "userSigRS2048.wasm.gz": {
+    "etag": "\"0x8DECA228F468AE3\"",
+    "len": "1369681"
+  },
+  "witness_calculator.js.gz": {
+    "etag": "\"0x8DECA228F16C2EE\"",
+    "len": "2915"
+  },
+  "snippets.tar.gz": {
+    "etag": "\"0x8DECA1FE6464744\"",
+    "len": "2349"
+  }
+}
